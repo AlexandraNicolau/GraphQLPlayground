@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { useQuery } from '@apollo/react-hooks';
 import gql from "graphql-tag";
+import Button from './button'
 
 const getAPIinfo = gql` {
   characters(page: 2) {
@@ -40,6 +41,7 @@ function App() {
               <img src={character.image} />
                 <h3>{character.name}</h3>
                 <p>Character status: <b>{character.status}</b></p>
+                <Button/>
               </div>
             </div>
           ))}
